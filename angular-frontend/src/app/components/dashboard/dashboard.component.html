@@ -1,0 +1,24 @@
+<div class="container mt-4">
+    <div class="card shadow-lg p-4">
+      <h2 class="text-center text-primary mb-4">User List</h2>
+  
+      <ul class="list-group">
+        <li class="list-group-item d-flex justify-content-between align-items-center" *ngFor="let user of users">
+          <a class="fw-bold text-decoration-none text-dark" [routerLink]="['/user-details', user.user_id]">
+            {{ user.name }}
+          </a>
+          <span class="badge bg-info text-white">{{ user.email }}</span>
+        </li>
+      </ul>
+  
+      <div class="text-center mt-4">
+        <button class="btn btn-success me-2" [routerLink]="['/add-user']">
+          <i class="bi bi-person-plus-fill"></i> Add User
+        </button>
+        <button class="btn btn-danger" [routerLink]="['/remove-user']">
+          <i class="bi bi-person-dash-fill"></i> Remove User
+        </button>
+      </div>
+    </div>
+  </div>
+  

@@ -1,0 +1,20 @@
+<div class="container mt-4">
+    <div class="card shadow-lg p-4">
+        <h2 class="text-center text-primary mb-4">User Details</h2>
+
+        <div *ngIf="user; else loading">
+            <h4 class="text-dark">{{ user.name }}</h4>
+            <p><strong>Email:</strong> {{ user.email }}</p>
+            <p><strong>Phone Number:</strong> {{ user.phone_number }}</p>
+            <p><strong>Date of Birth:</strong> {{ user.date_of_birth | date:'longDate' }}</p> 
+            <p><strong>Gender:</strong> {{ getGenderLabel(user.gender) }}</p>
+            <p><strong>ID:</strong> {{ user.user_id }}</p>
+
+            <button class="btn btn-secondary" (click)="goToDashboard()">Back to Dashboard</button>
+        </div>
+
+        <ng-template #loading>
+            <p class="text-center text-muted">Loading user details...</p>
+        </ng-template>
+    </div>
+</div>

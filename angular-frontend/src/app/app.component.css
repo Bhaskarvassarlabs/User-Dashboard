@@ -1,0 +1,16 @@
+.container {
+    max-width: 900px;
+  }
+  
+  .card {
+    border-radius: 12px;
+    background-color: #f8f9fa;
+    padding: 20px;
+    border: none;
+  }
+  
+  h1 {
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
